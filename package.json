@@ -1,0 +1,72 @@
+{
+  "name": "citizen-connect-electron",
+  "version": "1.0.0",
+  "private": true,
+  "homepage": "./",
+  "main": "public/electron.js",
+  "description": "An electron app for citizen connect",
+  "scripts": {
+    "test": "react-scripts test",
+    "electron": "NODE_ENV=dev nodemon --exec \"\"electron .\"\"",
+    "react-start": "BROWSER=none react-scripts start",
+    "start": "concurrently \"npm run react-start\" \"wait-on http://localhost:3000/ && npm run electron\"",
+    "dev": "react-scripts start",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject",
+    "pack": "electron-builder --dir",
+    "dist": "react-scripts build && electron-builder"
+  },
+  "author": "Peter Moore",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^8.0.1",
+    "electron-builder": "^22.3.2",
+    "electron-reload": "^1.5.0",
+    "nodemon": "^2.0.2"
+  },
+  "build": {
+    "appId": "com.citizen.connect.app",
+    "directories": {
+      "buildResources": "assets"
+    },
+    "mac": {
+      "category": "public.app-category.utilities",
+      "icon": "icons/icon.png"
+    },
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ]
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "bootstrap": "^4.4.1",
+    "concurrently": "^5.1.0",
+    "electron-is-dev": "^1.1.0",
+    "jquery": "1.9.1 ",
+    "leaflet": "1.6.0",
+    "react": "^16.12.0",
+    "react-bootstrap": "^1.0.0-beta.16",
+    "react-dom": "^16.12.0",
+    "react-leaflet": "2.6.1",
+    "react-router-bootstrap": "0.25.0",
+    "react-router-dom": "^5.1.0",
+    "react-scripts": "3.4.0",
+    "wait-on": "^4.0.0"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+.left {
+  position: fixed;
+  right:2px;
+  height: 100%;
+  width: 20em;
+  z-index:99999;
+}
+.filters {
+  height:100%;
+}
