@@ -6,4 +6,4 @@ npm install
 
 npm start
 
-npm dist
+npm run dist

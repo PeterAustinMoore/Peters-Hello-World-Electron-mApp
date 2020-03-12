@@ -11,11 +11,6 @@ class RightBar extends React.Component {
        events: []
      };
     async componentDidMount() {
-        const accessToken = "TEST"
-        this.apiClient = new APIClient(accessToken);
-        this.apiClient.getEvents().then((data) =>
-          this.setState({...this.state, events: data})
-        );
     }
     render() {
         return (
